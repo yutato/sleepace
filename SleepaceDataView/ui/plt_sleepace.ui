@@ -201,7 +201,7 @@
      <string>SAMPLING RATE</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="obj_test">
+   <widget class="QTextBrowser" name="obj_detail">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -315,7 +315,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>&gt;&gt; detial</string>
+     <string>&gt;&gt; detail</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_6">
@@ -344,6 +344,7 @@
      <string>Report Data</string>
     </property>
    </widget>
+   <zorder>obj_button_plot</zorder>
    <zorder>obj_dev_list</zorder>
    <zorder>obj_fname_list</zorder>
    <zorder>label_dev</zorder>
@@ -353,8 +354,7 @@
    <zorder>label_alg</zorder>
    <zorder>obj_fs_list</zorder>
    <zorder>label_fs</zorder>
-   <zorder>obj_test</zorder>
-   <zorder>obj_button_set</zorder>
+   <zorder>obj_detail</zorder>
    <zorder>obj_input_fname</zorder>
    <zorder>checkBox</zorder>
    <zorder>checkBox_2</zorder>
