@@ -71,24 +71,24 @@ class MyApp(QMainWindow, Ui_MainWindow):
         return file_list
 
     def get_raw_data(self):
-        self.obj_test.append('>> Reading raw data...')
+        self.obj_detail.append('>> Reading raw data...')
         self.file_name = self.get_input_fname()
         self.raw_data,self.gain = data.read_raw(self.file_name,mode=self.get_mode_name())
-        self.obj_test.append('[OK]')
+        self.obj_detail.append('[OK]')
 
     def get_offbed_data(self):
-        self.obj_test.append('>> Reading offbed data...')
+        self.obj_detail.append('>> Reading offbed data...')
         self.file_name   = self.get_input_fname()
         self.offbed_real = data.read_onbed(self.file_name,mode='real')
         self.offbed_his  = data.read_onbed(self.file_name,mode='his')
-        self.obj_test.append('[OK]')
+        self.obj_detail.append('[OK]')
 
     # sample function
     def get_xxx(self):
-        self.obj_test.append('>> Reading xxx data...')
+        self.obj_detail.append('>> Reading xxx data...')
         self.file_name = self.get_input_fname()
         #self.xxx = data.read_xxx(self.file_name,mode=self.get_mode_name())
-        self.obj_test.append('[OK]')
+        self.obj_detail.append('[OK]')
 
     def click_plotting_button(self):
         # read settings
@@ -100,7 +100,7 @@ class MyApp(QMainWindow, Ui_MainWindow):
         self.settings  = 'device name: ' + dev_name + '\n' + 'mode: ' + mode_name  + '\n' \
                          + 'sampling rate: ' + fs + '\n' + 'algorithm: ' + alg_ver + '\n' \
                          + 'file name: ' + file_name
-        self.obj_test.setText(self.settings) 
+        self.obj_detail.setText(self.settings) 
 
         # read data
         self.get_raw_data()
